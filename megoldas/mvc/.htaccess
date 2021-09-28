@@ -1,0 +1,12 @@
+RewriteEngine On
+
+   RewriteBase /megoldas/mvc/
+
+   RewriteRule ^index\.php$ - [L]
+
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule kezdolap index.php [L,QSA]
+   RewriteRule felhasznalok users.php [L,QSA]
+   RewriteRule hirdetesek advertisement.php [L,QSA]
